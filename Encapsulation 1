@@ -1,0 +1,31 @@
+class Weapon
+{
+    private int Damage;
+    private int Bullets;
+
+    public void Fire(Player player)
+    {
+        player.ire(Damage);
+        Bullets -= 1;
+    }
+}
+
+class Player
+{
+    private int Health;
+
+    public void ire(int damage)
+    {
+        Health -= damage;
+    }
+}
+
+class Bot
+{
+    private Weapon Weapon;
+
+    public void OnSeePlayer(Player player)
+    {
+        Weapon.Fire(player);
+    }
+}
